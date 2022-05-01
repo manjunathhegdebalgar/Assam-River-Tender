@@ -17,7 +17,7 @@ def update_proper_records():
         "query": {
             "query_string": {
                 "query": positive_words + "AND NOT" + negative_words,
-                "default_field": "tender/title"
+                "fields": ["tender/title", "tender/externalReference"]
             }
         }
     }
